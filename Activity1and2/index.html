@@ -1,0 +1,242 @@
+<!-- 1. <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Lecture</title>
+</head>
+
+<body>
+    <h1 id = "title">Activity</h1>
+    <div class = "product-item">
+        <h2 id = "product-title-1">Awesome Gadget</h2>
+        <p class = "product-description-1">A revolutionary device for everyday use.</p>
+        <span class = "price">Price: P49.99</span>
+        <button class = "add-to-cart-btn" id = "add-btn-1" onclick="changeTitle()">Add to Cart</button>
+    </div>
+
+    <div class = "product-item-featured">
+        <h2 id = "product-title-2">Deluxe Widget</h2>
+        <p class = "product-description-2">Experience the ultimate in widget technology.</p>
+        <span class = "price">Price: P99.99</span>
+        <button class = "add-to-cart-btn" id = "add-btn-2" onclick="changeTitle()">Add to Cart</button>
+    </div>
+
+    <div class = "product-item">
+        <h2 id = "product-title-3">Basic Thingamajig</h2>
+        <p class = "product-description-3">A simple solution to a complex problem.</p>
+        <span class = "price">Price: P19.99</span>
+        <button class = "add-to-cart-btn" id = "add-btn-3" onclick="changeTitle()">Add to Cart</button>
+    </div>
+
+</body>
+
+<script>
+    function changeTitle(){
+        document.getElementById("product-title-2").innerText = "Featured: Deluxe Widget Limited Edition";
+        }
+</script>
+</html> -->
+
+
+
+<!-- 2. <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Lecture</title>
+</head>
+
+<body>
+    <h1 id = "title">Activity</h1>
+    <div class = "product-item">
+        <h2 id = "product-title-1">Awesome Gadget</h2>
+        <p class = "product-description">A revolutionary device for everyday use.</p>
+        <span class = "price">Price: P49.99</span>
+        <button class = "add-to-cart-btn" id = "add-btn-1" onclick="changeTitle()">Add to Cart</button>
+    </div>
+
+    <div class = "product-item-featured">
+        <h2 id = "product-title-2">Deluxe Widget</h2>
+        <p class = "product-description">Experience the ultimate in widget technology.</p>
+        <span class = "price">Price: P99.99</span>
+        <button class = "add-to-cart-btn" id = "add-btn-2" onclick="changeTitle()">Add to Cart</button>
+    </div>
+
+    <div class = "product-item">
+        <h2 id = "product-title-3">Basic Thingamajig</h2>
+        <p class = "product-description">A simple solution to a complex problem.</p>
+        <span class = "price">Price: P19.99</span>
+        <button class = "add-to-cart-btn" id = "add-btn-3" onclick="changeTitle()">Add to Cart</button>
+    </div>
+
+</body>
+
+<script>
+    function changeTitle(){
+        const description = document.getElementsByClassName("product-description");
+        for (let i = 0; i < description.length; i++) {
+            description[i].textContent += "(Special Offer)";
+        }
+    }
+</script>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Lecture</title>
+</head>
+
+<body>
+    <h1>Heading 1!</h1>
+    <h1>Heading 2!</h1>
+    <h1>Heading 3!</h1>
+    <button onClick = "changeHeadings()">Update Heading</button>
+</body>
+
+<script>
+    function changeHeadings() {
+        let headings = document.getElementsByTagName("h1");
+        for (let i = 0; i < headings.length; i++) {
+            headings[i].style.color = "blue";
+        }
+    }
+</script>
+</html> -->
+
+
+
+<!-- 3 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Lecture</title>
+</head>
+
+<body>
+    <p class = "message">Hello</p>
+    <p class = "message">Another Message</p>
+    <p>Heading 3!</p>
+    <button onclick = "changeMessage()">Update the First MSG</button>
+</body>
+
+<script>
+    function changeMessage() {
+        let msg = document.querySelector(".message");
+        msg.innerText = "Updated"
+    }
+</script>
+</html> -->
+
+
+
+<!-- 4 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Lecture</title>
+</head>
+
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+<script>
+    let listItems = document.querySelectorAll("li");
+    listItems.forEach(item => item.style.fontWeight = "bold");
+</script>
+</html> -->
+
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>My Awesome Blog Post</title> 
+    <style> 
+        .important { 
+            font-weight: bold; 
+            color: green; 
+        } 
+        .comment { 
+            border: 1px solid #ccc; 
+            margin-bottom: 10px; 
+            padding: 10px; 
+        } 
+        #main-title { 
+            font-size: 2em; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1 id="main-title" onclick="changeTitle()">The Wonders of JavaScript</h1> 
+    <p class="post-paragraph">JavaScript is an amazing language that allows for dynamic web 
+development.</p> 
+    <p class="post-paragraph important">One of its key features is the ability to manipulate the 
+DOM.</p> 
+ 
+    <div id="comments-section"> 
+        <h2>Comments</h2> 
+        <div class="comment" data-comment-id="1"> 
+            <p class="comment-author">Alice</p> 
+            <p class="comment-text">Great post!</p> 
+        </div> 
+        <div class="comment"> 
+            <p class="comment-author">Bob</p> 
+            <p class="comment-text important">I learned a lot.</p> 
+        </div> 
+        <ul id="tags"> 
+            <li class="tag">javascript</li> 
+            <li class="tag important">dom</li> 
+            <li class="tag">web development</li> 
+        </ul> 
+    </div> 
+ 
+    <button id="highlight-important">Highlight Important Text</button> 
+ 
+    <script>
+        function changeTitle(){
+            document.getElementById("main-title").innerText = "Exploring the Power of DOM Manipulation";
+            }
+
+        let total = document.getElementsByClassName("post-paragraph");
+        console.log(total.length);
+        
+        let commentAuthors = document.getElementsByClassName("comment-author");
+        console.log("Comment authors:");
+
+        for (let i = 0; i < commentAuthors.length; i++) {
+            console.log(commentAuthors[i].innerText);
+        }
+        document.getElementById("highlight-important").onclick = function () {
+            let importantElements = document.getElementsByClassName("important");
+            for (let i = 0; i < importantElements.length; i++) {
+                importantElements[i].style.backgroundColor = "yellow";
+            }
+        };
+
+
+       
+    </script>
+    </html> 
+</body> 
+</html>
